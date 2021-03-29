@@ -1,3 +1,5 @@
+EN COURS DE REDACTION
+
 # Une infra dans le Cloud
 
 Contexte du projet
@@ -15,3 +17,13 @@ Contexte du projet
 Nous importons notre BBD via PostgresSQL dans AWS RDS.
 Notre base de données : ![clubdata.sql](Clubdata.sql) 
 https://hub.docker.com/_/postgres
+
+
+# serveur EC2
+
+
+
+
+
+
+# bucket S3
