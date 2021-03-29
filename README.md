@@ -13,5 +13,5 @@ Contexte du projet
 # bdd PostgresSQL avec AWS RDS.
 
 Nous importons notre BBD via PostgresSQL dans AWS RDS.
-Notre base de données : clubdata.sql
+Notre base de données : ![clubdata.sql](Clubdata.sql)
 https://hub.docker.com/_/postgres
