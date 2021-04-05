@@ -41,10 +41,12 @@ A travers des containers nous insérons nos informations python via le docker-co
 
 ![image](CAPTUREDOCKER.PNG)
 
-Le fichier API est alimenté via le fichier config.py et le fichier aws.ini(fichier dans lequel nous indiquons les éléments pour la connexion à la base de donnéeset permet à notrefichier api d'être universel)
+Le fichier API, nous permet de nous connecter à la bdd, de créér les requêtes qui interoogent la bdd  et les chemins pour les API.
+
+Le fichier API est alimenté via le fichier config.py et le fichier aws.ini(fichier dans lequel nous indiquons les éléments pour la connexion à la base de données et permet à notre fichier api d'être universel)
 
 
-Nous pouvons nous connecter à l'API en indiquant notre adresseIPsuivie de docs
+Nous pouvons nous connecter à l'API en indiquant notre adresse IP suivie de docs
 
 ![image](APIgetfacilities.png)
 
@@ -53,7 +55,7 @@ Nous pouvons nous connecter à l'API en indiquant notre adresseIPsuivie de docs
 
 
 # bucket S3
-Nous créeons un bucket dans AWS S3dans lequel on place notre base de données.
+Nous créons un bucket dans AWS S3dans lequel on place notre base de données.
 
 ![image](S3STOCKAGEBDD.PNG)
 
