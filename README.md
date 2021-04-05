@@ -22,13 +22,21 @@ https://hub.docker.com/_/postgres
 
 
 # serveur EC2
+Nous créons l'instance sous EC2 en veillant à indiquer en adresse entrante des IP 0, cela nous permettra dans ce cas de nous connecter à notre convenance de n'importe quelle source (à éviter en terme de sécurité dans la vraie vie)
+
+A travers des containers nous insérons nos informations python via le docker-compose.yml (et ses fichiers annexes requirements.txt, dockerfile.txt,
+![image](copies ecrans/CAPTUREDOCKER.PNG)
+
+Le fichier API est alimenté via le fichier config.py et le fichier aws.ini(fichier dans lequel nous indiquons les éléments pour la connexion à la base de donnéeset permet à notrefichier api d'être universel)
 
 
-
+Nous pouvons nous connecter 
+![image](copies ecrans/API get_facilities.png)
+![image](copies ecrans/fastapicapture.png)
 
 
 
 # bucket S3
 Nous créeons un bucket dans AWS S3dans lequel on place notre base de données.
-![S3- STOCKAGEBDD.PNG](S3- STOCKAGEBDD.PNG)
+![image](copies ecrans/compartimentS3/S3- STOCKAGEBDD.PNG)
 
