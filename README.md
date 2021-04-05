@@ -15,14 +15,17 @@ Contexte du projet
 # bdd PostgresSQL avec AWS RDS.
 
 Nous importons notre BBD via PostgresSQL dans AWS RDS.
-![image](RDS.PNG)
 
 Notre base de données : ![source](Clubdata.sql) 
 
-https://hub.docker.com/_/postgres
+informations PostgresSQL : https://hub.docker.com/_/postgres
 
+![image](RDS.PNG)
+
+![image](Capture.PNG)
 
 # serveur EC2
+
 Nous créons l'instance sous EC2 en veillant à indiquer en adresse entrante des IP 0, cela nous permettra dans ce cas de nous connecter à notre convenance de n'importe quelle source (à éviter en terme de sécurité dans la vraie vie)
 
 A travers des containers nous insérons nos informations python via le docker-compose.yml (et ses fichiers annexes requirements.txt, dockerfile.txt,
