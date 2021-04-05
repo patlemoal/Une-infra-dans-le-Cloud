@@ -1,0 +1,117 @@
+[ec2-user@ip-172-31-17-249 ~]$ cd brief
+[ec2-user@ip-172-31-17-249 brief]$ ls
+api.py  aws.ini  clubdata.sql  config.py  docker-compose.yml  Dockerfile  main2.py  requirements.txt
+[ec2-user@ip-172-31-17-249 brief]$ ls
+API  aws.ini  clubdata.sql  config.py  docker-compose.yml  Dockerfile  main2.py  requirements.txt
+[ec2-user@ip-172-31-17-249 brief]$ ls
+API  aws.ini  clubdata.sql  config.py  docker-compose.yml  Dockerfile  main2.py  pgadmin  requirements.txt
+
+
+[ec2-user@ip-172-31-17-249 brief]$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+[ec2-user@ip-172-31-17-249 brief]$ docker-compose up -d
+Creating network "brief_default" with the default driver
+Pulling db (postgres:)...
+latest: Pulling from library/postgres
+6f28985ad184: Pull complete
+163a60947b3a: Pull complete
+1791984387e5: Pull complete
+ccf9c39579c4: Pull complete
+1d8dd50a5ee9: Pull complete
+3991abc55a94: Pull complete
+4cf2cdef0857: Pull complete
+ed1bec410498: Pull complete
+0930368b9a14: Pull complete
+a9302936fdb5: Pull complete
+bb3d505cd0cb: Pull complete
+4f1bb2dd6f16: Pull complete
+8d3f6ff7b2da: Pull complete
+687caf1b1f9b: Pull complete
+Digest: sha256:751a206812498180468160529091ef3c7ca4ed78bf11bc44202de6b0b338c173
+Status: Downloaded newer image for postgres:latest
+Pulling pgadmin (dpage/pgadmin4:)...
+latest: Pulling from dpage/pgadmin4
+ba3557a56b15: Pull complete
+643359576e2f: Pull complete
+c1921c55929f: Pull complete
+a12face1aed2: Pull complete
+b8fa30cf518a: Pull complete
+1061264b711e: Pull complete
+7e132af9a10c: Pull complete
+acfae944bca1: Pull complete
+33c8c29c671d: Pull complete
+f97f818257f4: Pull complete
+debbf3503783: Pull complete
+9d627f1feeb6: Pull complete
+Digest: sha256:72558ab26a46412751515a154e924136589ab18e7bc7a47f0fb48a634ff9e727
+Status: Downloaded newer image for dpage/pgadmin4:latest
+Building fastapi
+Step 1/6 : FROM tiangolo/uvicorn-gunicorn-fastapi:python3.7
+python3.7: Pulling from tiangolo/uvicorn-gunicorn-fastapi
+90fe46dd8199: Pull complete
+35a4f1977689: Pull complete
+bbc37f14aded: Pull complete
+74e27dc593d4: Pull complete
+4352dcff7819: Pull complete
+deb569b08de6: Pull complete
+1aa33568be24: Pull complete
+a8034acd5893: Pull complete
+7dfa9b763153: Pull complete
+a035e7b052a3: Pull complete
+d4f2cd280496: Pull complete
+e227f25dc86f: Pull complete
+97a4044094b0: Pull complete
+5d40afec4e92: Pull complete
+f6b5e3636b46: Pull complete
+85a8adaae1ef: Pull complete
+3bd649e0d635: Pull complete
+7855c9b64055: Pull complete
+Digest: sha256:a0e0188a485fd8c232d8774ae4680d3b834f95dd2deccdb0211ce71cfd778b97
+Status: Downloaded newer image for tiangolo/uvicorn-gunicorn-fastapi:python3.7
+ ---> e2f19ac0b4e3
+Step 2/6 : WORKDIR ./API /API
+ ---> Running in bbf135b034f7
+Removing intermediate container bbf135b034f7
+ ---> e92f6f778c43
+Step 3/6 : COPY requirements.txt requirements.txt
+ ---> afb92264b9a9
+Step 4/6 : RUN pip3 install -r requirements.txt
+ ---> Running in 81837aaabe2f
+Collecting more-itertools
+  Downloading more_itertools-8.7.0-py3-none-any.whl (48 kB)
+Requirement already satisfied: fastapi in /usr/local/lib/python3.7/site-packages (from -r requirements.txt (line 2)) (0.62.0)
+Requirement already satisfied: uvicorn in /usr/local/lib/python3.7/site-packages (from -r requirements.txt (line 3)) (0.11.3)
+Collecting psycopg2
+  Downloading psycopg2-2.8.6.tar.gz (383 kB)
+Requirement already satisfied: starlette==0.13.6 in /usr/local/lib/python3.7/site-packages (from fastapi->-r requirements.txt (line 2)) (0.13.6)
+Requirement already satisfied: pydantic<2.0.0,>=1.0.0 in /usr/local/lib/python3.7/site-packages (from fastapi->-r requirements.txt (line 2)) (1.7.3)
+Requirement already satisfied: h11<0.10,>=0.8 in /usr/local/lib/python3.7/site-packages (from uvicorn->-r requirements.txt (line 3)) (0.9.0)
+Requirement already satisfied: websockets==8.* in /usr/local/lib/python3.7/site-packages (from uvicorn->-r requirements.txt (line 3)) (8.1)
+Requirement already satisfied: uvloop>=0.14.0; sys_platform != "win32" and sys_platform != "cygwin" and platform_python_implementation != "PyPy" in /usr/local/lib/python3.7/site-packages (from uvicorn->-r requirements.txt (line 3)) (0.14.0)
+Requirement already satisfied: click==7.* in /usr/local/lib/python3.7/site-packages (from uvicorn->-r requirements.txt (line 3)) (7.1.1)
+Requirement already satisfied: httptools==0.1.*; sys_platform != "win32" and sys_platform != "cygwin" and platform_python_implementation != "PyPy" in /usr/local/lib/python3.7/site-packages (from uvicorn->-r requirements.txt (line 3)) (0.1.1)
+Building wheels for collected packages: psycopg2
+  Building wheel for psycopg2 (setup.py): started
+  Building wheel for psycopg2 (setup.py): finished with status 'done'
+  Created wheel for psycopg2: filename=psycopg2-2.8.6-cp37-cp37m-linux_x86_64.whl size=467927 sha256=194aa4e12d0ce833c2acf23f940599fb05e305b730bc323aae2cd4686ae42b48
+  Stored in directory: /root/.cache/pip/wheels/25/78/75/9c0323f7e1fb42143cbd2439302beb7850a1034abb961cb281
+Successfully built psycopg2
+Installing collected packages: more-itertools, psycopg2
+Successfully installed more-itertools-8.7.0 psycopg2-2.8.6
+WARNING: You are using pip version 20.0.2; however, version 21.0.1 is available.
+You should consider upgrading via the '/usr/local/bin/python -m pip install --upgrade pip' command.
+Removing intermediate container 81837aaabe2f
+ ---> a30a7f95186b
+Step 5/6 : COPY . .
+ ---> f7075b051791
+Step 6/6 : CMD ["uvicorn", "API.api:app"]
+ ---> Running in 83a5811b2067
+Removing intermediate container 83a5811b2067
+ ---> 6db07483b213
+Successfully built 6db07483b213
+Successfully tagged aws:latest
+WARNING: Image for service fastapi was built because it did not already exist. To rebuild this image you must use `docker-compose build` or `docker-compose up --build`.
+Creating postgres_db ... done
+Creating postgres_admin ... done
+Creating fastapi_aws    ... done
+[ec2-user@ip-172-31-17-249 brief]$ 
