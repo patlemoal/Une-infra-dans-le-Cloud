@@ -40,5 +40,5 @@ Nous pouvons nous connecter
 # bucket S3
 Nous créeons un bucket dans AWS S3dans lequel on place notre base de données.
 
-![image](S3- STOCKAGEBDD.PNG)
+![image](S3STOCKAGEBDD.PNG)
 
