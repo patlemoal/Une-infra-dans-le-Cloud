@@ -9,7 +9,7 @@ Contexte du projet
     Une base de données PostgreSQL avec RDS,
     Un serveur avec EC2 pour accueillir l'appli Python,
     Ajouter du code Python test qui se connecte à la base et exécute au moins 2 requêtes 
-    Créer un bucket sur S3 pour sauvegarder la fichier SQL. ```
+    Créer un bucket sur S3 pour sauvegarder la fichier SQL. ````
 
 
 # bdd PostgresSQL avec AWS RDS.
