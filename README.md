@@ -32,7 +32,9 @@ Le fichier API est alimenté via le fichier config.py et le fichier aws.ini(fich
 
 
 Nous pouvons nous connecter 
+
 ![image](APIgetfacilities.png)
+
 ![image](fastapicapture.png)
 
 
