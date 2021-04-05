@@ -44,7 +44,7 @@ A travers des containers nous insérons nos informations python via le docker-co
 Le fichier API est alimenté via le fichier config.py et le fichier aws.ini(fichier dans lequel nous indiquons les éléments pour la connexion à la base de donnéeset permet à notrefichier api d'être universel)
 
 
-Nous pouvons nous connecter 
+Nous pouvons nous connecter à l'API en indiquant notre adresseIPsuivie de docs
 
 ![image](APIgetfacilities.png)
 
