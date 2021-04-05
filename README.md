@@ -22,12 +22,13 @@ informations PostgresSQL : https://hub.docker.com/_/postgres
 
 ![image](RDS.PNG)
 
-![image](Capture.PNG)
+
 
 # serveur EC2
 
 
 Nous créons l'instance sous EC2 en veillant à indiquer en adresse entrante des IP 0, cela nous permettra dans ce cas de nous connecter à notre convenance de n'importe quelle source (à éviter en terme de sécurité dans la vraie vie)
+![image](Capture.PNG)
 
 Nous créons une machine virtuelle via VScode.
 ![image](machinevirtuelle.png)
@@ -36,6 +37,7 @@ Nous créons une machine virtuelle via VScode.
 A travers des containers nous insérons nos informations python via le docker-compose.yml (et ses fichiers annexes requirements.txt, dockerfile.txt)
 
 ![image](dockercompose.png)
+
 
 ![image](CAPTUREDOCKER.PNG)
 
